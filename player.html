@@ -11,6 +11,7 @@
     <link rel="manifest" href="manifest.json">
 
     <script src="libs/tailwindcss.min.js"></script>
+    <script src="libs/extension.website.user.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body, html {
@@ -618,20 +619,14 @@
                 chromecast: true,                // 启用Chromecast投屏功能
                 contextmenu: [                   // 自定义右键菜单
                     {
-                        text: '关于 LibreTV',
-                        link: 'https://github.com/bestzwei/LibreTV'
-                    },
-                    {
-                        text: '问题反馈',
-                        click: (player) => {
-                            window.open('https://github.com/bestzwei/LibreTV/issues', '_blank');
-                        }
+                        text: '旋律的博客',
+                        link: 'https://blog.ihtw.moe'
                     }
                 ],
                 video: {
                     url: videoUrl,
                     type: 'hls',
-                    pic: 'image/nomedia.png', // 设置视频封面图
+                    pic: 'https://raw.ihtw.moe/github.com/JohnsonRan/opwrt_build_script/raw/master/openwrt/files/bg/bg.webp', // 设置视频封面图
                     customType: {
                         hls: function(video, player) {
                             // 清理之前的HLS实例
